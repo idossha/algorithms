@@ -18,11 +18,12 @@ def bfs(graph, start):
 
     while queue:
         node = queue.popleft()  # Dequeue the next node
-
+        print(node)
         if node not in visited:
             visited.add(node)
+            print(f"visited:{visited}")
             result.append(node)
-
+            print(f"result:{result}")
             # Enqueue unvisited neighbors
             for neighbor in graph[node]:
                 if neighbor not in visited:
